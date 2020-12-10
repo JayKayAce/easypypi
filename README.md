@@ -55,6 +55,11 @@ Thanks to the magic of [`cleverdict`](https://github.com/pfython/cleverdict) you
 
 Your last set of answers (except passwords) are stored in a JSON config file will be kept up to date automatically when you change values.  The location defaults to the recommended setting folder for your Operating System.
 
+If you want to create a `Package` object but skip the default review of metadata and return early to the command line, you can use the `prompts` keyword argument:
+
+    >>> package = Package("as_easy_as_pie", prompts=False)
+
+
 # 3. THE FOUR STEP PROCESS
 
 Apart from the obvious `__init__` when you create your `Package`, there are four main methods or 'entry points' which you can invoke directly to step through the publishing process:
@@ -94,7 +99,13 @@ Finally, when you're  ready to upload your latest `Package` to **Test PyPI** or 
 
     >>> package.upload()
 
+This entry point also includes a handy option to auto-create a new (private) Github repository and automatically Push your new package files and folders.
+
 # 4. OTHER FEATURES
+
+Check which essential values haven't yet been set:
+
+    >>> package.summary()
 
 Automatically generate the next version number for your `Package` (more schemas coming soon):
 
