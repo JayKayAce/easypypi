@@ -2,7 +2,7 @@ appdirs==1.4.4
 atomicwrites==1.4.0
 attrs==20.3.0
 beautifulsoup4==4.9.3
-black==20.8b1
+black>=20.8b1
 certifi==2020.12.5
 chardet==4.0.0
 cleverdict==1.7.3
